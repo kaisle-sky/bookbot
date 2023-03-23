@@ -1,7 +1,7 @@
 
 def count_words(text):
     words = text.split()
-    print(len(words))
+    return len(words)
 
 def count_letters(list):
     big_string = "".join(list)
@@ -38,11 +38,20 @@ def count_letters(list):
         check = little_string[n]
         if check in letter_dict:
             letter_dict[check] += 1
-    print(letter_dict)
+    return letter_dict
+
+def book_report(book):
+    print("--- Begin report of books/frankenstein.txt ---")
+    print(f"{count_words(book)} words found in the document")
+    print("")
+    sorted_book = sorted(count_letters(book).items(), key=lambda x:x[1], reverse=True)
+    converted_dict = dict(sorted_book)
+    for key in converted_dict:
+        print(f"The '{key}' character was found {converted_dict[key]} times")
+    print("--- End report ---")
 
 
 with open("./books/frankenstein.txt") as f:
     text_read = f.read()
 
-count_words(text_read)
-count_letters(text_read)
+book_report(text_read)
