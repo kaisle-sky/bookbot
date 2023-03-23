@@ -1,10 +1,10 @@
 # bookbot
 
-Bookbot is my first git project. Features include:
+### Bookbot is my first git project. Features include:
 - Reports word count for a local txt file
 - Reports letter counts for a local txt file
 
-Notesfor future projects/upates:
+### Notesfor future projects/upates:
 - Update how the program opens the txt file to follow absolute path
 - Investigate other, more useufl features
   - Count occurance of words
